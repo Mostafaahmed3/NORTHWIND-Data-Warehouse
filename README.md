@@ -59,17 +59,11 @@ The project uses multiple CSV files inspired by the Northwind database:
 
 ---
 
-## 🚀 Future Improvements
-- Automate data loading using **SSIS or Python scripts**.  
-- Add **data validation checks** in the Silver layer.  
-- Build a **Power BI dashboard** for sales & purchase insights.  
-
----
 
 ## 👨‍💻 Author
 **Mostafa Ahmed**  
 * Aspiring Data Engineer*  
-📧 [Contact via LinkedIn or Email]
+📧 [Contact via LinkedIn : www.linkedin.com/in/mostafa-ahmed-a4726b221 ]
 
 ---
 
