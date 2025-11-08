@@ -55,7 +55,7 @@ The project uses multiple CSV files inspired by the Northwind database:
 - **SQL Server** (or any RDBMS)
 - **T-SQL / Stored Procedures**
 - **Medallion Architecture**
-- (Optional) Power BI or Excel for visualization
+- Excel for visualization
 
 ---
 
