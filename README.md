@@ -48,5 +48,30 @@ The project uses multiple CSV files inspired by the Northwind database:
 
 ---
 
-## 📂 Folder Structure
+
+---
+
+## 📊 Technologies Used
+- **SQL Server** (or any RDBMS)
+- **T-SQL / Stored Procedures**
+- **Medallion Architecture**
+- (Optional) Power BI or Excel for visualization
+
+---
+
+## 🚀 Future Improvements
+- Automate data loading using **SSIS or Python scripts**.  
+- Add **data validation checks** in the Silver layer.  
+- Build a **Power BI dashboard** for sales & purchase insights.  
+
+---
+
+## 👨‍💻 Author
+**Mostafa Ahmed**  
+* Aspiring Data Engineer*  
+📧 [Contact via LinkedIn or Email]
+
+---
+
+
 
