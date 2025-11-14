@@ -1,0 +1,76 @@
+TRUNCATE TABLE bronze.customer;
+BULK INSERT bronze.customer
+FROM 'D:\your Journy is possiple\NORTHWIND DW\dataset\customer.csv'
+WITH (
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '0x0A',
+    FIRSTROW = 2,
+    TABLOCK
+);
+
+
+
+TRUNCATE TABLE bronze.employee;
+BULK INSERT bronze.employee
+FROM 'D:\your Journy is possiple\NORTHWIND DW\dataset\employees.csv'
+WITH (
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '0x0A',
+    FIRSTROW = 2,
+    TABLOCK
+);
+
+
+TRUNCATE TABLE bronze.order_details;
+BULK INSERT bronze.order_details
+FROM 'D:\your Journy is possiple\NORTHWIND DW\dataset\order_details.csv'
+WITH (
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '0x0A',
+    FIRSTROW = 2,
+    TABLOCK
+);
+
+
+TRUNCATE TABLE bronze.orders;
+BULK INSERT bronze.orders
+FROM 'D:\your Journy is possiple\NORTHWIND DW\dataset\orders.csv'
+WITH (
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '0x0A',
+    FIRSTROW = 2,
+    TABLOCK
+);
+
+
+TRUNCATE TABLE bronze.product;
+BULK INSERT bronze.product
+FROM 'D:\your Journy is possiple\NORTHWIND DW\dataset\products.csv'
+WITH (
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '0x0A',
+    FIRSTROW = 2,
+    TABLOCK
+);
+
+
+TRUNCATE TABLE bronze.purchase_order_details;
+BULK INSERT bronze.purchase_order_details
+FROM 'D:\your Journy is possiple\NORTHWIND DW\dataset\purchase_order_details.csv'
+WITH (
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '0x0A',
+    FIRSTROW = 2,
+    TABLOCK
+);
+
+
+TRUNCATE TABLE bronze.supplier;
+BULK INSERT bronze.supplier
+FROM 'D:\your Journy is possiple\NORTHWIND DW\dataset\suppliers.csv'
+WITH (
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '0x0A',
+    FIRSTROW = 2,
+    TABLOCK
+);
