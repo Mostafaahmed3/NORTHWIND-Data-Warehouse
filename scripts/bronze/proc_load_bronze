@@ -1,3 +1,27 @@
+/*
+===============================================================================
+Stored Procedure: Load Bronze Layer (Source -> Bronze)
+===============================================================================
+Script Purpose:
+    This stored procedure loads data into the 'bronze' schema from external CSV files. 
+    It performs the following actions:
+    - Truncates the bronze tables before loading data.
+    - Uses the `BULK INSERT` command to load data from csv Files to bronze tables.
+
+Parameters:
+    None. 
+	  This stored procedure does not accept any parameters or return any values.
+===============================================================================
+*/
+
+EXEC bronze.load_bronze;
+
+CREATE OR ALTER PROCEDURE bronze.load_bronze AS
+BEGIN
+BEGIN TRY
+		PRINT '================================================';
+		PRINT 'Loading Bronze Layer is Begin';
+		PRINT '================================================';
 TRUNCATE TABLE bronze.customer;
 BULK INSERT bronze.customer
 FROM 'D:\your Journy is possiple\NORTHWIND DW\dataset\customer.csv'
@@ -7,8 +31,6 @@ WITH (
     FIRSTROW = 2,
     TABLOCK
 );
-
-
 
 TRUNCATE TABLE bronze.employee;
 BULK INSERT bronze.employee
@@ -20,7 +42,6 @@ WITH (
     TABLOCK
 );
 
-
 TRUNCATE TABLE bronze.order_details;
 BULK INSERT bronze.order_details
 FROM 'D:\your Journy is possiple\NORTHWIND DW\dataset\order_details.csv'
@@ -30,7 +51,6 @@ WITH (
     FIRSTROW = 2,
     TABLOCK
 );
-
 
 TRUNCATE TABLE bronze.orders;
 BULK INSERT bronze.orders
@@ -42,7 +62,6 @@ WITH (
     TABLOCK
 );
 
-
 TRUNCATE TABLE bronze.product;
 BULK INSERT bronze.product
 FROM 'D:\your Journy is possiple\NORTHWIND DW\dataset\products.csv'
@@ -52,7 +71,6 @@ WITH (
     FIRSTROW = 2,
     TABLOCK
 );
-
 
 TRUNCATE TABLE bronze.purchase_order_details;
 BULK INSERT bronze.purchase_order_details
@@ -64,7 +82,6 @@ WITH (
     TABLOCK
 );
 
-
 TRUNCATE TABLE bronze.supplier;
 BULK INSERT bronze.supplier
 FROM 'D:\your Journy is possiple\NORTHWIND DW\dataset\suppliers.csv'
@@ -74,3 +91,13 @@ WITH (
     FIRSTROW = 2,
     TABLOCK
 );
+PRINT '=========================================='
+PRINT 'Loading Bronze Layer is Completed';
+PRINT '=========================================='
+END TRY
+BEGIN CATCH
+PRINT '=========================================='
+PRINT 'ERROR OCCURED DURING LOADING BRONZE LAYER'
+PRINT '=========================================='
+END CATCH
+END
