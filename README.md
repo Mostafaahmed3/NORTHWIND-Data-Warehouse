@@ -26,7 +26,6 @@ The project uses multiple CSV files inspired by the Northwind database:
 | `orders.csv` | Main table for sales orders data. |
 | `order_details.csv` | Detailed information about products within each order. |
 | `products.csv` | List of products and their categories. |
-| `purchase_orders.csv` | Data related to purchase transactions. |
 | `purchase_order_details.csv` | Details of each purchase order item. |
 | `suppliers.csv` | Details of each Supplier. |
 
