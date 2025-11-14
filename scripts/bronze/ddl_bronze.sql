@@ -55,7 +55,7 @@ CREATE TABLE bronze.employee (
     country_region VARCHAR(50),
     web_page VARCHAR(255),
     notes varchar(max),
-    attachments VARBINARY(MAX)
+    attachments VARCHAR(50)
 );
 
 
