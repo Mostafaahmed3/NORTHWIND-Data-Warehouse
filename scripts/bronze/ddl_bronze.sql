@@ -34,6 +34,7 @@ CREATE TABLE bronze.supplier (
 );
 
 
+
 IF OBJECT_ID('bronze.employee') IS NOT NULL
 DROP TABLE bronze.employee;
 
@@ -55,7 +56,7 @@ CREATE TABLE bronze.employee (
     country_region VARCHAR(50),
     web_page VARCHAR(255),
     notes varchar(max),
-    attachments VARCHAR(50)
+    attachments VARCHAR(500)
 );
 
 
