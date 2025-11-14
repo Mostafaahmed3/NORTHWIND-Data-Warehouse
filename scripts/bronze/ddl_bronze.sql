@@ -80,7 +80,7 @@ CREATE TABLE bronze.customer (
     country_region VARCHAR(50),
     web_page VARCHAR(255),
     notes varchar(max),
-    attachments VARBINARY(MAX)
+    attachments varchar(max)
 );
 
 
@@ -93,15 +93,15 @@ CREATE TABLE bronze.product (
     product_code VARCHAR(50),
     product_name VARCHAR(100),
     description varchar(max),
-    standard_cost DECIMAL(10,9),
-    list_price DECIMAL(10,9),
+    standard_cost DECIMAL(10,3),
+    list_price DECIMAL(10,3),
     reorder_level INT,
     target_level INT,
     quantity_per_unit VARCHAR(50),
     discontinued BIT,
     minimum_reorder_quantity INT,
     category VARCHAR(50),
-    attachments VARBINARY(MAX)
+    attachments VARCHAR(50)
 );
 
 
@@ -158,7 +158,7 @@ CREATE TABLE bronze.purchase_order_details (
     purchase_order_id INT,
     product_id INT,
     quantity INT,
-    unit_cost DECIMAL(10,9),
+    unit_cost DECIMAL(10,3),
     date_received DATETIME,
     posted_to_inventory BIT,
     inventory_id INT
