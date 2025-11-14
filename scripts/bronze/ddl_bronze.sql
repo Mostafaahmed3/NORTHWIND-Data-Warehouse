@@ -112,8 +112,8 @@ CREATE TABLE bronze.orders (
     id INT ,
     employee_id INT,
     customer_id INT,
-    order_date DATETime,
-    shipped_date DATETime,
+    order_date NVARCHAR(50),
+    shipped_date VARCHAR(50),
     shipper_id INT,
     ship_name VARCHAR(100),
     ship_address VARCHAR(255),
@@ -121,15 +121,15 @@ CREATE TABLE bronze.orders (
     ship_state_province VARCHAR(50),
     ship_zip_postal_code VARCHAR(20),
     ship_country_region VARCHAR(50),
-    shipping_fee DECIMAL(10,9),
-    taxes DECIMAL(10,9),
+    shipping_fee DECIMAL(10,3),
+    taxes DECIMAL(10,3),
     payment_type VARCHAR(50),
-    paid_date DATETime,
+    paid_date VARCHAR(50),
     notes varchar(max),
-    tax_rate DECIMAL(5,5),
+    tax_rate DECIMAL(5,3),
     tax_status_id INT,
     status_id INT,
-    modified_date DATETIME
+    modified_date VARCHAR(50)
 );
 
 
