@@ -1,3 +1,4 @@
+
 /*
 ===============================================================================
 DDL Script: Create Silver Tables
@@ -30,7 +31,8 @@ CREATE TABLE silver.supplier (
     country_region VARCHAR(50),
     web_page VARCHAR(255),
     notes varchar(max),
-    attachments VARCHAR(50)
+    attachments VARCHAR(50),
+	dwh_create_date    DATETIME2 DEFAULT GETDATE()
 );
 
 
@@ -56,7 +58,8 @@ CREATE TABLE silver.employee (
     country_region VARCHAR(50),
     web_page VARCHAR(255),
     notes varchar(max),
-    attachments VARCHAR(500)
+    attachments VARCHAR(500),
+	dwh_create_date    DATETIME2 DEFAULT GETDATE()
 );
 
 
@@ -81,7 +84,8 @@ CREATE TABLE silver.customer (
     country_region VARCHAR(50),
     web_page VARCHAR(255),
     notes varchar(max),
-    attachments varchar(max)
+    attachments varchar(max),
+	dwh_create_date    DATETIME2 DEFAULT GETDATE()
 );
 
 
@@ -102,7 +106,8 @@ CREATE TABLE silver.product (
     discontinued BIT,
     minimum_reorder_quantity INT,
     category VARCHAR(50),
-    attachments VARCHAR(50)
+    attachments VARCHAR(50),
+	dwh_create_date    DATETIME2 DEFAULT GETDATE()
 );
 
 
@@ -130,7 +135,8 @@ CREATE TABLE silver.orders (
     tax_rate DECIMAL(5,3),
     tax_status_id INT,
     status_id INT,
-    modified_date VARCHAR(50)
+    modified_date VARCHAR(50),
+	dwh_create_date    DATETIME2 DEFAULT GETDATE()
 );
 
 
@@ -147,7 +153,8 @@ CREATE TABLE silver.order_details (
     status_id INT,
     date_allocated DATETIME,
     purchase_order_id INT,
-    inventory_id INT
+    inventory_id INT,
+	dwh_create_date    DATETIME2 DEFAULT GETDATE()
 );
 
 
@@ -162,5 +169,6 @@ CREATE TABLE silver.purchase_order_details (
     unit_cost DECIMAL(10,3),
     date_received DATETIME,
     posted_to_inventory BIT,
-    inventory_id INT
+    inventory_id INT,
+	dwh_create_date    DATETIME2 DEFAULT GETDATE()
 );
